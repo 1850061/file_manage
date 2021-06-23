@@ -1,0 +1,12 @@
+help                          --获取指令格式以及用法
+exit                          --退出文件系统
+reset                         --格式化磁盘
+create dir name               --创建名字为name的目录（当前目录下）
+show dir                      --展示当前目录下所有目录名以及文件名
+create txt name               --创建名字为name的txt文件（当前目录下）
+cd path                       --进入path，支持绝对寻址（以root:/为开头）以及相对寻址两种寻址方式
+rename originName newName     --把名字为originName的文件或者目录重命名为newName
+read txt txtName              --读取当前目录下名字的txtName的txt文件（写名字是要以.txt结尾）
+write txt txtName content     --往当前目录下名字的txtName的txt文件写入内容content（写名字是要以.txt结尾）
+see txt txtName               --查看文件名为txtName的txt文件的文件属性
+delete name                   --删除文件名为name的txt文件或者目录，如果是目录则还会递归删除目录下的子目录、子文件
