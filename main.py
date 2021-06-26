@@ -41,6 +41,7 @@ def reset():
 def fileController():
     global nowBlock, pathNow
     print('欢迎进入文件管理系统，你可以输入help获取帮助')
+    print('本文件管理系统中，磁盘一共256块，每块大小16Byte')
     while True:
         print(pathNow + '>', end='')
         command = input()

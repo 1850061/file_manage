@@ -147,17 +147,25 @@ def rename(origin, new, nowBlock):
 
 
 def eraseFat(list):
+    fileContent = readFile()
     for i in range(len(list)):
         FAT.nowFat[list[i]] = -2
+        fileContent[list[i]] = '0' * 16 + '\n'
+    with open('fileManage.txt', 'w') as f:
+        f.writelines(fileContent)
 
 
 def clearFat(list):
+    fileContent = readFile()
     for i in range(len(list)):
         if i == 0:
             FAT.nowFat[list[i]] = -1
             continue
         else:
             FAT.nowFat[list[i]] = -2
+            fileContent[list[i]] = '0' * 16 + '\n'
+    with open('fileManage.txt', 'w') as f:
+        f.writelines(fileContent)
 
 
 def readTxt(nowBlock, name):

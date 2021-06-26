@@ -221,6 +221,9 @@ def combinePath(nowPath, addPath):
         if addPath.endswith('/'):
             return addPath
         return addPath + '/'
+    for i in range(len(add)):
+        if add[len(add) - i - 1] == '.':
+            del add[len(add) - i - 1]
     back = 1
     for i in range(len(add)):
         if add[i] == '..':
